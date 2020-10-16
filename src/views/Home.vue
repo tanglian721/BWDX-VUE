@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <page-header />
-    <nav-bar />
+    <transition
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
+    >
+      <nav-bar />
+    </transition>
     <page-slider />
     <homepage-info />
     <page-contact />
@@ -29,31 +34,41 @@ export default {
     PageContact,
     PageMap,
     PageFooter
-  },
- 
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 .home {
-  width: 100vw;
+  box-sizing: border-box;
+  width: 100%;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
   .header {
+    z-index: 99;
     width: 100%;
     height: 8vh;
     position: sticky;
     top: 0;
+    // left: 0;
   }
   .nav-bar {
-    width: 100%;
     position: absolute;
-    top: 8vh;
+    z-index: 80;
+    width: 100%;
   }
   .slider {
     width: 100%;
     height: 60vw;
     overflow: hidden;
+  }
+  .homepage-info {
+    margin-top: 3vh;
+  }
+  .footer {
+    width: 100%;
   }
 }
 </style>

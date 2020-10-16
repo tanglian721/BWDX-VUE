@@ -15,4 +15,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.homepage-info {
+  display: grid;
+  justify-items: center;
+  row-gap: 2vh;
+  #intro-text {
+    display: grid;
+    row-gap: 2vh;
+    width: 70%;
+    #text-header {
+      text-align: center;
+    }
+    #text-content {
+      font-size: 0.8rem;
+    }
+  }
+  #info-img {
+    width: 70%;
+  }
+}
 </style>
