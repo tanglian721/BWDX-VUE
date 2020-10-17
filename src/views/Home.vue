@@ -67,6 +67,13 @@ export default {
   .homepage-info {
     margin-top: 3vh;
   }
+  .map {
+    border-radius: 10%;
+    overflow: hidden;
+    width: 70%;
+    margin-left: 15%;
+    height: 30vh;
+  }
   .footer {
     width: 100%;
   }

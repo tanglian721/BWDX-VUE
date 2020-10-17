@@ -6,11 +6,8 @@
   </div>
 </template>
 <script>
-export default {
-  
-}
 </script>
-@import url('https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js');
+
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&family=Oswald&family=Piazzolla:wght@200&display=swap');
