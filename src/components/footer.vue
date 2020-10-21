@@ -27,7 +27,7 @@ export default {
 .footer {
   display: grid;
   justify-items: center;
-  background-color: #003399;
+  background-color: #00305b;
   p, a {
     color: white;
     font-size: 0.6rem;
