@@ -53,4 +53,25 @@ export default {
     padding: 5px;
   }
 }
+@media only screen and (min-width: 1366px) {
+  .footer {
+  display: grid;
+  justify-items: center;
+  background-color: #00305b;
+  p, a {
+    color: white;
+    font-size: 0.8rem;
+    padding: 1px 0;
+  }
+  #footer-top {
+
+    width: 100%;
+
+  }
+
+  #footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+}
 </style>

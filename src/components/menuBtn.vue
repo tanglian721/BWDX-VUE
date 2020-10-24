@@ -1,14 +1,16 @@
 <template>
   <div class="menuBtn">
     <transition name="btn" mode="in-out">
-      <img class="menu"
+      <img
+        class="menu"
         v-if="BarDisplay"
         id="menu-btn"
         src="../assets/letter-x.png"
         alt=""
         @click="navBarToggle"
       />
-      <img class="menu"
+      <img
+        class="menu"
         v-else
         id="menu-btn"
         src="../assets/menu.png"
@@ -16,7 +18,9 @@
         @click="navBarToggle"
       />
     </transition>
-    <img id="top" src="../assets/top.png" alt="">
+    <a href="#" v-if='scroll'>
+      <img id="top" src="../assets/top.png" alt="" />
+    </a>
   </div>
 </template>
 
@@ -26,6 +30,13 @@ export default {
   computed: {
     BarDisplay() {
       return this.$store.state.navBarDisplay;
+    },
+    scroll() {
+      if (window.scrollY > 1000){
+        return true;
+      } else {
+        return false;
+      }
     }
   },
   methods: {
@@ -33,7 +44,10 @@ export default {
       console.log("a");
       this.$store.commit("navBarToggle");
     }
-  }
+  },
+  mounted () {
+    console.log(this.scroll);
+  },
 };
 </script>
 
@@ -49,7 +63,6 @@ export default {
     left: 10vw;
     width: 14vw;
   }
-
 }
 .btn-enter,
 .btn-leave-to {

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-      <menu-btn />
+    <menu-btn />
     <transition name="nav">
       <nav-bar v-if="BarDisplay" />
     </transition>
@@ -10,9 +10,14 @@
     <page-header />
     <page-slider />
     <page-business id="business" />
-    <homepage-info id="about"/>
+    <homepage-info id="about" />
+    <page-img />
     <page-map />
     <page-contact />
+    <a id="toTop" href="#" v-if="BarDisplay" @click="haha">
+      <img src="../assets/up_arrow_white.png" alt="" />
+      <p>Back to Top</p>
+    </a>
     <page-footer />
   </div>
 </template>
@@ -22,11 +27,12 @@ import PageHeader from "../components/Header";
 import MenuBtn from "../components/menuBtn";
 import NavBar from "../components/nav-bar";
 import PageSlider from "../components/slider";
-import PageBusiness from "../components/business"
+import PageBusiness from "../components/business";
 import HomepageInfo from "../components/homepage-info";
 import PageContact from "../components/contact";
 import PageMap from "../components/map";
 import PageFooter from "../components/footer";
+import PageImg from '../components/info-img'
 
 export default {
   name: "Home",
@@ -39,12 +45,34 @@ export default {
     HomepageInfo,
     PageContact,
     PageMap,
-    PageFooter
+    PageFooter,
+    PageImg
+  },
+  data() {
+    return {
+     
+    }
   },
   computed: {
     BarDisplay() {
-      return this.$store.state.navBarDisplay;
+      if (screen.width >= "1366") {
+        return true;
+      } else {
+        return this.$store.state.navBarDisplay;
+      }
+    },
+    scroll() {
+      return window.scrollY;
     }
+  },
+  methods: {
+    haha() {
+      console.log("a");
+      console.log(this.scroll);
+    }
+  },
+  mounted() {
+    console.log(screen.width);
   }
 };
 </script>
@@ -80,13 +108,59 @@ export default {
 
   .map {
     overflow: hidden;
-    margin:20% 10%;
-    width: 80%;
-    height: 40vh;
-    border-radius: 50%;
+    width: 100%;
+    height: 80vh;
   }
   .footer {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .header {
+    width: 55%;
+    margin-left: 0;
+    position: fixed;
+    // grid-template-columns: 2fr 7fr;
+  }
+  #nav-bg {
+    display: none;
+  }
+  .menuBtn {
+    display: none;
+  }
+  .nav-bar {
+    width: 45%;
+    height: 15vh;
+  }
+  .slider {
+    margin-top: 15vh;
+    height: 85vh;
+  }
+  .page-business {
+    height: 70vh;
+  }
+  .contact {
+    height: 70vh;
+  }
+  .footer {
+    height: 15vh;
+  }
+  #toTop {
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    justify-items: center;
+    background-color: #00315be8;
+    img {
+      width: 3%;
+      margin-top: 1vh;
+    }
+    p {
+      text-transform: uppercase;
+      margin-top: -2vh;
+      font-size: 2rem;
+      color: white;
+    }
   }
 }
 .v-enter,

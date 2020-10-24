@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img id="logo" src="../assets/Logo Circle-color.png" alt="" />
+    <img id="logo" src="../assets/logo.png" alt="" />
     <div id="name">
       <p id="name-chi">南京秉文东信科技有限公司</p>
       <p id="name-eng">Nanjing BW Southeast Information Technologies Co.,Ltd</p>
@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  // background-color: #003399;
+  background-color:white;
   z-index: 80;
   width: 100%;
   height: 15vh;
@@ -31,9 +31,9 @@ export default {
   top: 0;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 2fr 7fr;
   #logo {
-    height: 50%;
+    height: 60%;
     justify-self: end;
   }
   #name {
@@ -52,5 +52,28 @@ export default {
     }
   }
  
+}
+
+@media only screen and (min-width: 1366px) {
+   .header {
+  grid-template-columns: 1fr 1fr;
+   #logo {
+    margin-bottom: 2vh;
+    align-self: end;
+  }
+  #name {
+    align-self: end;
+    margin-bottom: 3vh;
+    margin-left: 2vw;
+    #name-chi {
+      font-size: 1.4rem;
+      text-align: left;
+    }
+    #name-eng {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+   }
 }
 </style>

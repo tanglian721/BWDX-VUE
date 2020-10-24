@@ -33,7 +33,8 @@ export default {
       hooperSettings: {
         autoPlay: true,
         centerMode: true,
-        playSpeed: 3000
+        playSpeed: 3000,
+        wheelControl: false
       }
     };
   },

@@ -1,5 +1,11 @@
 <template>
-  <div class="contact">
+  <div class="contact" id="contact">
+    <div id="contact-title">
+      <h2>
+        CONTACT <br />& 
+        ADDRESS
+      </h2>
+    </div>
     <div id="contact-content">
       <div id="business-time">
         <p>工作时间:</p>
@@ -42,7 +48,7 @@ export default {
   z-index: 30;
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   .contact-bg {
     z-index: -1;
     position: absolute;
@@ -51,22 +57,52 @@ export default {
     top: 0;
     background-image: url("../assets/contactbg .jpeg");
     background-size: cover;
-    background-color: #00315b4d;
     filter: blur(4px);
-    filter: brightness(50%);
+  }
+  #contact-title {
+    box-sizing: border-box;
+    height: 20vh;
+    padding: 10%;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #002444d0;
+    color: white;
   }
   #contact-content {
+    box-sizing: border-box;
+    background-color: #01182c7c;
     z-index: 40;
     padding: 10%;
-  > div {
-    margin-top: 3vh;
-    p,
-    a {
-      font-size: 1rem;
-      font-family: ZoomlaXSongExtraLight;
-      color: white;
+    height: 70vh;
+    > div {
+      margin-top: 3vh;
+      p,
+      a {
+        font-size: 1rem;
+        font-family: ZoomlaXSongExtraLight;
+        color: white;
+      }
     }
   }
+}
+@media only screen and (min-width: 1366px) {
+  .contact {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2fr 3fr;
+     #contact-title {
+       width: 80%;
+       margin-left: 10vw;
+     }
+    #contact-content {
+      >div{
+      p,
+      a {
+        font-size: 1.2rem;
+      }
+      }
+    }
   }
 }
 </style>

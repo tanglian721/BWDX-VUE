@@ -5,7 +5,7 @@
       <a id="business-btn" href="#business" @click="navHide">我们的业务</a>
       <a id="about-btn" href="#about" @click="navHide">关于我们</a>
       <a id="news-btn" href="#" @click="navHide">新闻</a>
-      <a id="contact-btn" href="#">联系我们</a>
+      <a id="contact-btn" href="#contact">联系我们</a>
     </div>
   </div>
 </template>
@@ -14,9 +14,10 @@
 export default {
   name: "nav-bar",
   computed: {
-    BarDisplay() {
-      return this.$store.state.navBarDisplay;
-    }
+    // BarDisplay() {
+
+    //   return this.$store.state.navBarDisplay;
+    // }
   },
   methods: {
     navHide() {
@@ -47,24 +48,34 @@ export default {
       // font-weight: bold;
     }
   }
-  // a {
-  //   z-index: 80;
-  //   color: white;
-  //   width: 100%;
-  //   padding: 10px 0;
-  //   text-align: center;
-  //   &:hover {
-  //     color: #003399;
-  //     background-color: rgb(255, 251, 251, 0.6);
-  //   }
-  // }
-  // #nav-bg {
-  //   z-index: 50;
-  //   width: 100%;
-  //   height: 100vh;
-  //   background-color: rgba(0, 0, 0, 0.3);
-  //   position: absolute;
-  //   top: 0;
-  // }
+
+}
+@media only screen and (min-width: 1366px) {
+  .nav-bar {
+  background-color: white;
+  #nav-btn {
+    margin-top: 0;
+    margin-left: 0;
+    height: 100%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: end;
+    justify-items: center;
+    >a {
+      width: 100%;
+      font-size: 1rem;
+      padding: 2vh 0;
+      margin-bottom: 2vh;
+      color: #00305b;
+        text-align: center;
+      &:hover {
+        background-color: #00305b;
+        color:white;
+      }
+      // font-weight: bold;
+    }
+  }
+}
 }
 </style>
