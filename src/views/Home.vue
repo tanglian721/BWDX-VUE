@@ -32,7 +32,7 @@ import HomepageInfo from "../components/homepage-info";
 import PageContact from "../components/contact";
 import PageMap from "../components/map";
 import PageFooter from "../components/footer";
-import PageImg from '../components/info-img'
+import PageImg from "../components/info-img";
 
 export default {
   name: "Home",
@@ -49,9 +49,7 @@ export default {
     PageImg
   },
   data() {
-    return {
-     
-    }
+    return {};
   },
   computed: {
     BarDisplay() {
@@ -105,61 +103,71 @@ export default {
     height: 65vh;
     overflow: hidden;
   }
-
+  .page-business {
+    width: 100%;
+    height: 100vh;
+  }
+  .page-img {
+    width: 100%;
+  }
   .map {
+    z-index: 50;
     overflow: hidden;
     width: 100%;
     height: 80vh;
+    box-shadow: 0 0 5px gray;
   }
   .footer {
     width: 100%;
   }
 }
 @media only screen and (min-width: 1366px) {
-  .header {
-    width: 55%;
-    margin-left: 0;
-    position: fixed;
-    // grid-template-columns: 2fr 7fr;
-  }
-  #nav-bg {
-    display: none;
-  }
-  .menuBtn {
-    display: none;
-  }
-  .nav-bar {
-    width: 45%;
-    height: 15vh;
-  }
-  .slider {
-    margin-top: 15vh;
-    height: 85vh;
-  }
-  .page-business {
-    height: 70vh;
-  }
-  .contact {
-    height: 70vh;
-  }
-  .footer {
-    height: 15vh;
-  }
-  #toTop {
-    width: 100%;
-    height: 10vh;
-    display: grid;
-    justify-items: center;
-    background-color: #00315be8;
-    img {
-      width: 3%;
-      margin-top: 1vh;
+  .home {
+    .header {
+      width: 55%;
+      margin-left: 0;
+      position: fixed;
+      // grid-template-columns: 2fr 7fr;
     }
-    p {
-      text-transform: uppercase;
-      margin-top: -2vh;
-      font-size: 2rem;
-      color: white;
+    #nav-bg {
+      display: none;
+    }
+    .menuBtn {
+      display: none;
+    }
+    .nav-bar {
+      width: 45%;
+      height: 15vh;
+    }
+    .slider {
+      margin-top: 15vh;
+      height: 85vh;
+    }
+    .page-business {
+      height: 85vh;
+    }
+    .contact {
+      height: 70vh;
+    }
+    .footer {
+      height: 15vh;
+    }
+    #toTop {
+      width: 100%;
+      height: 10vh;
+      display: grid;
+      justify-items: center;
+      background-color: #00315be8;
+      img {
+        width: 3%;
+        margin-top: 1vh;
+      }
+      p {
+        text-transform: uppercase;
+        margin-top: -2vh;
+        font-size: 2rem;
+        color: white;
+      }
     }
   }
 }

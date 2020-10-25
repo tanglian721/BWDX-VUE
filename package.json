@@ -14,6 +14,7 @@
     "vue": "^2.6.11",
     "vue-baidu-map": "^0.21.22",
     "vue-parallaxy": "^1.1.1",
+    "vue-rellax": "^0.2.0",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },

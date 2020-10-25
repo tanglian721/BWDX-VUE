@@ -1,10 +1,7 @@
 <template>
   <div class="contact" id="contact">
     <div id="contact-title">
-      <h2>
-        CONTACT <br />& 
-        ADDRESS
-      </h2>
+      <h2>CONTACT <br />& ADDRESS</h2>
     </div>
     <div id="contact-content">
       <div id="business-time">
@@ -91,16 +88,17 @@ export default {
     align-items: center;
     justify-items: center;
     grid-template-columns: 2fr 3fr;
-     #contact-title {
-       width: 80%;
-       margin-left: 10vw;
-     }
+    #contact-title {
+      width: 80%;
+      margin-left: 10vw;
+    }
     #contact-content {
-      >div{
-      p,
-      a {
-        font-size: 1.2rem;
-      }
+      > div {
+        p,
+        a {
+          margin-top: -0.5vh;
+          font-size: 1.2rem;
+        }
       }
     }
   }
