@@ -10,9 +10,9 @@
       <slide>
         <img src="../assets/bookFair3.jpg" alt="" />
       </slide>
-      <slide>
+      <!-- <slide>
         <img src="../assets/bookFair4.jpg" alt="" />
-      </slide>
+      </slide> -->
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
   </div>
