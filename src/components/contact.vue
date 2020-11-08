@@ -3,6 +3,7 @@
     <div id="contact-title">
       <h2>CONTACT <br />& ADDRESS</h2>
     </div>
+    <vue-aos animation-class="animate__animated animate__slideInRight">
     <div id="contact-content">
       <div id="business-time">
         <p>工作时间:</p>
@@ -30,13 +31,18 @@
         <p>江苏省南京市鼓楼区模范马路66号 南邮大厦 2314号</p>
       </div>
     </div>
+      </vue-aos>
+
     <div class="contact-bg"></div>
   </div>
 </template>
 
 <script>
+import VueAos from "vue-aos";
+
 export default {
-  name: "page-contact"
+  name: "page-contact",
+   components: { VueAos },
 };
 </script>
 

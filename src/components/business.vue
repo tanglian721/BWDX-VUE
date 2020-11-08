@@ -1,7 +1,9 @@
 <template>
   <div class="page-business">
-    <h2 id="business-header">公司主要业务</h2>
+    
+      <h2 id="business-header">公司主要业务</h2>
     <div id="content-area">
+      <vue-aos animation-class="animate__animated animate__slideInRight">
       <ul id="business-content">
         <li>进口图书销售</li>
         <p>具体销售项目简介</p>
@@ -14,17 +16,23 @@
         <li>图书加工</li>
         <p>具体销售项目简介</p>
       </ul>
+    </vue-aos>
     </div>
   </div>
 </template>
 
 <script>
+import VueAos from "vue-aos";
 export default {
-  name: "page-business"
+  name: "page-business",
+  components: {
+    VueAos
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 .page-business {
   #business-header {
     line-height: 20vh;
