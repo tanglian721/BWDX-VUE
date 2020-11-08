@@ -2,7 +2,7 @@
   <div class="nav-bar">
     <div id="nav-btn">
       <a id="home-btn" href="#" @click="navHide">首页</a>
-      <a id="business-btn" href="#business" @click="navHide">我们的业务</a>
+      <a id="business-btn" href="#business_anchor" @click="navHide">我们的业务</a>
       <a id="about-btn" href="#about" @click="navHide">关于我们</a>
       <a id="news-btn" href="#" @click="navHide">新闻</a>
       <a id="contact-btn" href="#contact">联系我们</a>

@@ -1,7 +1,9 @@
 <template>
   <div class="page-business">
-    
-      <h2 id="business-header">公司主要业务</h2>
+      <h2 id="business-header">
+      <span id="business_anchor">
+      </span>
+        公司主要业务</h2>
     <div id="content-area">
       <vue-aos animation-class="animate__animated animate__slideInRight">
       <ul id="business-content">
@@ -66,7 +68,12 @@ export default {
   }
 }
 @media only screen and (min-width: 1366px) {
+  #business_anchor{
+    position: absolute;
+    top: -10vh;
+  }
   .page-business {
+    position: relative;
     display: grid;
     align-items: center;
     justify-items: center;
