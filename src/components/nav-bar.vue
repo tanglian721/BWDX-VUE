@@ -72,6 +72,7 @@ export default {
       &:hover {
         background-color: #00305b;
         color:white;
+        transition: all 0.2s linear;
       }
       // font-weight: bold;
     }

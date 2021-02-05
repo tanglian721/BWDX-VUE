@@ -5,7 +5,6 @@
       <p id="name-chi">南京秉文东信科技有限公司</p>
       <p id="name-eng">Nanjing BW Southeast Information Technologies Co.,Ltd</p>
     </div>
-  
   </div>
 </template>
 
@@ -16,14 +15,14 @@ export default {
     navBarToggle() {
       console.log("a");
       this.$store.commit("navBarToggle");
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  background-color:white;
+  background-color: white;
   z-index: 80;
   width: 100%;
   height: 15vh;
@@ -51,29 +50,29 @@ export default {
       text-align: center;
     }
   }
- 
 }
 
 @media only screen and (min-width: 1366px) {
-   .header {
-  grid-template-columns: 1fr 1fr;
-   #logo {
-    margin-bottom: 2vh;
-    align-self: end;
-  }
-  #name {
-    align-self: end;
-    margin-bottom: 3vh;
-    margin-left: 2vw;
-    #name-chi {
-      font-size: 1.4rem;
-      text-align: left;
+  .header {
+    grid-template-columns: 1fr 1fr;
+    #logo {
+      height: 4.5em;
+      margin-bottom: 2vh;
+      align-self: end;
     }
-    #name-eng {
-      font-size: 1rem;
-      text-align: left;
+    #name {
+      align-self: end;
+      margin-bottom: 3vh;
+      margin-left: 2vw;
+      #name-chi {
+        font-size: 1.4rem;
+        text-align: left;
+      }
+      #name-eng {
+        font-size: 1rem;
+        text-align: left;
+      }
     }
   }
-   }
 }
 </style>
