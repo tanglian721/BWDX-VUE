@@ -32,7 +32,7 @@ export default {
   align-items: center;
   grid-template-columns: 2fr 7fr;
   #logo {
-    height: 60%;
+    height: 4em;
     justify-self: end;
   }
   #name {
